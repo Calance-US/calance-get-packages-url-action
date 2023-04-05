@@ -2,7 +2,7 @@ name: TestCase 1 - Testing the working of action
 on:
   push:
     branches:
-      - "408-get-url-of-packages"
+      - "408-get-url-of-packages"   # Enter the branch for which you are testing
 jobs:
   run-action:
     runs-on: ubuntu-latest
