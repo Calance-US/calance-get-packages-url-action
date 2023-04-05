@@ -1,0 +1,19 @@
+name: Get the URL of packages
+description: Get the URL of packages that failed to delete or needs github assistance for deletion
+
+inputs:
+  packages_failed_to_delete:
+    description: List of packages that failed to delete
+    required: true
+  packages_needs_github_assistance:
+    description: List of packages that needs github assistance for deletion
+    required: true
+
+outputs:
+  packages_failed_urls:
+    description: Packages failed to delete 
+  packages_needs_github_assistance_urls:
+    description: Packages that needs github assistance
+runs:
+  using: 'node16'
+  main: 'dist/index.js'
