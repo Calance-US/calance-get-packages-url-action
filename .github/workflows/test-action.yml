@@ -16,5 +16,5 @@ jobs:
           packages_needs_github_assistance: 'calance-services:1234567,calance-services:79627191'
       - name: Echo the outputs
         run: |
-          #echo ${{ steps.get-packages-url.outputs.packages_failed_urls}}
+          
           echo ${{ steps.get-packages-url.outputs.packages_needs_github_assistance_urls}}
