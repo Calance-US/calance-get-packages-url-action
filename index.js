@@ -3,6 +3,8 @@ const core = require('@actions/core')
 try {
   let packagesFailed = core.getInput('packages_failed_to_delete', { required: true })
   let packagesNeedsGithubAssistance = core.getInput('packages_needs_github_assistance', { required: true })
+  packagesFailed = packagesFailed.replaceAll(`"`,"")
+  packagesNeedsGithubAssistance = packagesNeedsGithubAssistance.replaceAll(`"`,"")
 
   const packagesFailedUrls = []
   const packagesNeedsGithubAssistanceUrls = []
